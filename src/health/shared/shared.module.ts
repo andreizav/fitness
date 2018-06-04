@@ -1,26 +1,27 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+// thirds-party modules
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 // components
-import { AuthFormComponent } from './components/auth-form/auth-form.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
 
 // services
-import { AuthService } from './services/auth/auth.service';
-
-// guards
-import { AuthGuard } from './guards/auth.guard'
+import { MealsService } from './services/meals/meals.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    RouterModule,
+    AngularFireDatabaseModule
   ],
   declarations: [
-    AuthFormComponent
+    ListItemComponent
   ],
   exports: [
-    AuthFormComponent
+    ListItemComponent
   ]
 })
 export class SharedModule {
@@ -28,8 +29,7 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
-        AuthService,
-        AuthGuard
+        MealsService
       ]
     };
   }
