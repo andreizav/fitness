@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
-//components
+// components
 import { MealFormComponent } from './components/meal-form/meal-form.component';
 
 // containers
@@ -15,7 +15,7 @@ import { MealComponent } from './containers/meal/meal.component';
 export const ROUTES: Routes = [
   { path: '', component: MealsComponent },
   { path: 'new', component: MealComponent },
-  { path: ':id', component: MealComponent }
+  { path: ':id', component: MealComponent },
 ];
 
 @NgModule({
@@ -31,4 +31,4 @@ export const ROUTES: Routes = [
     MealFormComponent
   ]
 })
-export class MealsModule { }
+export class MealsModule {}

@@ -20,6 +20,7 @@ import { User } from '../../../auth/shared/services/auth/auth.service';
   `
 })
 export class AppHeaderComponent {
+
   @Input()
   user: User;
 

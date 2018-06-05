@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 // shared modules
 import { SharedModule } from './shared/shared.module';
 
-//guards
+// guards
 import { AuthGuard } from '../auth/shared/guards/auth.guard';
 
 export const ROUTES: Routes = [
@@ -19,4 +19,4 @@ export const ROUTES: Routes = [
     SharedModule.forRoot()
   ]
 })
-export class HealthModule { }
+export class HealthModule {}

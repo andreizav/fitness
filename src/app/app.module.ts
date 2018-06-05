@@ -39,4 +39,4 @@ export const ROUTES: Routes = [
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {}
